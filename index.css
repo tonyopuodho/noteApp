@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.left-container{
+    height: 100%;
+    width: 30%;
+    background-color: #011901;
+    position: relative;    
+}
+.notes-tag{
+    width: 100%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.notes-tag h1{
+    font-weight: bolder;
+    font-size: 40px;
+}
+.notes-container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+}
+.notes-container::-webkit-scrollbar{
+    background-color: white;
+    width: 6px;
+    border-radius: 10px;
+}
+.notes-container::-webkit-scrollbar-thumb{
+    background-color: #011901;
+    border-radius: 10px;
+}
+.notes{
+    padding: 10px;
+    height: 18%;
+    border-radius: 10px;
+    background-color: #BDBDBD;
+    margin-bottom: 10px;
+    position: relative;
+}
+.text{
+    height: 80%;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+.text p{
+    font-size: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.trash{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: #011901;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#date{
+    position: absolute;
+    right: 20px;
+}
