@@ -47,7 +47,7 @@ body{
 }
 .notes{
     padding: 10px;
-    height: 18%;
+    height: 15%;
     border-radius: 10px;
     background-color: #BDBDBD;
     margin-bottom: 10px;
@@ -64,7 +64,7 @@ body{
     font-size: 15px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
@@ -79,4 +79,59 @@ body{
 #date{
     position: absolute;
     right: 20px;
+}
+.right-container{
+    width: 70%;
+    height: 100%;
+    background-color: #BDBDBD;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar{
+    width: 100%;
+    padding: 10px;
+    height: 10%;
+    background-color: #FFF;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.5);
+    position: fixed;
+}
+#add-btn{
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #011901;
+    color: #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.text-area{
+    padding: 20px;
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#title-text{
+    padding: 12px;
+    width: 80%;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    background-color: #BDBDBD;
+}
+#text_area{
+    padding: 10px;
+    outline: none;
+    height: 80%;
+    width: 80%;
+    font-size: 15px;
+    font-weight: lighter;
+    border: none;
+    background-color: #BDBDBD;
 }
