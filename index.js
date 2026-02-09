@@ -26,8 +26,6 @@ buttonElement.addEventListener('click',() => {
         textElement.value = ""
         titleElement.value = ""
     }
-
-    displayNotes()
 })
 
 let displayNotes = () => {
@@ -35,8 +33,8 @@ let displayNotes = () => {
             notes.map((x) => {
             const { id, date, title, text} = x
             noteContainerElement.innerHTML += `
-            <div class="notes" id=${id}>
-                        <i class="fa-solid fa-trash trash"></i>
+            <div class="notes" id=${id} onclick="editingNotes(${id})">
+                        <i class="fa-solid fa-trash trash" onclick="deleteNote(${id})"></i>
                         <div class="text">
                             <h3 id="title">${title}</h3>
                                 <p id="paragraph">
@@ -48,6 +46,18 @@ let displayNotes = () => {
             `
         })
     }
+}
+
+function editingNotes(id){
+    let searchItem = notes.find((x) => x.id === id)
+    textElement.value = searchItem.text
+    titleElement.value = searchItem.title
+}
+
+function deleteNote(id){
+    notes = notes.filter((x) => x.id !== id)
+    localStorage.setItem("notes",JSON.stringify(notes))
+    displayNotes()
 }
 
 displayNotes()
